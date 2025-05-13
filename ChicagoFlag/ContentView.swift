@@ -41,12 +41,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Rectangle()
-                .foregroundColor(.orange)
-                .frame(width: 50, height: 50)
-            Image("chicagoStar")
-                .foregroundColor(.gray)
+        ZStack {
+          Rectangle()
+            
+            VStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(width: 1000, height: 50)
+                Rectangle()
+                    .foregroundColor(.blue)
+                    .frame(width: 1000, height: 50)
+                
+                Image("chicagoStar")
+                    .foregroundColor(.gray)
+            }
         }
     }
 }
